@@ -51,12 +51,6 @@ class Canvas {
         this.offHearts = [];
         this.data = null;
         this.texts = [
-            "Alabama, Arkansas",
-            "I do love my ma and pa",
-            "Not that way that I do love you",
-            "Well, holy moly, me oh my",
-            "You're the apple of my eye",
-            "Girl, I've never loved one like you"
         ]; // Массив текстов
         this.currentTextIndex = 0; // Индекс текущего текста
         this.currentText = ""; // Текущий текст для эффекта печатания
@@ -70,13 +64,6 @@ class Canvas {
         this.audio = new Audio(); // Создаем аудио объект
         this.loadAudio(); // Загружаем аудио
     }
-    loadAudio() {
-        this.audio.src = "assets/alabama.mp3"; // Укажите путь к вашему файлу музыки
-        this.audio.loop = true; // Включаем зацикливание музыки
-        this.audio.volume = 0.5; // Устанавливаем громкость (от 0 до 1)
-        this.audio.play().catch((error) => {
-            console.error("Ошибка при воспроизведении аудио:", error);
-        });
     }
     onInit() {
         let index = 0;
